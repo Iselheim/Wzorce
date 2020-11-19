@@ -7,7 +7,7 @@ public class LazySingletonMultiThread {
   public static LazySingletonMultiThread getInstance() {
     if (instance == null) {
       synchronized (LazySingletonMultiThread.class) {
-        if (instance == null) { // (2)
+        if (instance == null) {
           instance = new LazySingletonMultiThread();
         }
       }
